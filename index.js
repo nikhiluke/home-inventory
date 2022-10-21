@@ -29,7 +29,7 @@ app.post('/writeFile', function(req, res){
     });
 })
 
-const server = app.listen('8000', function(){
+const server = app.listen(process.env.port || '8000', function(){
     const host = server.address().address;
     const port = server.address().port;
     console.log(`server listening on : ${host}${port}`)
