@@ -29,7 +29,8 @@ app.post('/writeFile', function(req, res){
     });
 })
 
-const server = app.listen(process.env.port || '8000', function(){
+const server = app.listen(process.env.PORT || '8000', '0.0.0.0', function(){
+    console.log(process.env.PORT);
     const host = server.address().address;
     const port = server.address().port;
     console.log(`server listening on : ${host}${port}`)
