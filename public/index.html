@@ -1,22 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Inventory Server API</title>
-</head>
-<body>
-    <h1>Home Inventory Server API</h1>
-    <hr>
-    <div>
-        <h4>Read API :</h4>
-        <p><a href="/readFile"> -> Read File</a></p>
-    </div>
-    <hr>
-    <div>
-        <h4>Write API :</h4>
-        <p><a href="/writeFile"> -> write File</a></p>
-    </div>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="index.css" />
+		<script src="index.js" defer></script>
+		<title>Home Mapper</title>
+	</head>
+	<body>
+		<div class="root">
+			<h1>Home Mapper</h1>
+			<div class="panel">
+				<div class="panel_left">
+					<h2 class="sub-header">Data Entry</h2>
+					<table class="entry-table">
+						<thead class="entry-table-header">
+							<tr>
+								<th>S.No.</th>
+								<th>Date</th>
+								<th>Item</th>
+								<th>Person Who took</th>
+								<th>Delete</th>
+							</tr>
+						</thead>
+						<tbody class="entry-table-body"></tbody>
+					</table>
+				</div>
+				<div class="panel_right">
+					<h2 class="sub-header">Enter New Entry</h2>
+					<form class="form-group" onsubmit="submitFormData(event)">
+						<div class="form-data">
+							<label for="date-selector"
+								>Date On which Item taken:</label
+							>
+							<input
+								type="date"
+								name="item-date"
+								id="date-selector" />
+						</div>
+						<div class="form-data">
+							<label for="data-item-name">Item Name:</label>
+							<input
+								type="text"
+								name="item-name"
+								id="data-item-name" />
+						</div>
+						<div class="form-data">
+							<label for="data-item-person"
+								>Person Name who take item:</label
+							>
+							<input
+								type="text"
+								name="item-taker-person-name"
+								id="data-item-person" />
+						</div>
+						<div class="form-data">
+							<input type="submit" value="Add Entry" />
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
